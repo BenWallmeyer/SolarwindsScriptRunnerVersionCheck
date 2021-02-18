@@ -26,6 +26,10 @@ if (!$runner_version) {
 }
 if (!$script_runner_path) { 
     $script_runner_path = 'C:\Program Files (x86)\Advanced Monitoring Agent\ScriptRunner\Scriptrunner.exe'
+    if (!(Test-Path $script_runner_path))
+    {
+        $script_runner_path = 'C:\Program Files (x86)\Advanced Monitoring Agent GP\ScriptRunner\Scriptrunner.exe'
+    }
 }
 #>
 
